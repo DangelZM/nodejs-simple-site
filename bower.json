@@ -1,0 +1,15 @@
+{
+  "name": "BlogSite",
+  "version": "0.0.0",
+  "authors": [
+    "Ivan Zmerzlyi <ivan.zmerzlyi@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "public/vendors",
+    "test",
+    "tests"
+  ]
+}

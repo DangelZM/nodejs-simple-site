@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title #{sitename} - #{title}
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='/vendors/jquery/dist/jquery.min.js')
+    script(src='/javascripts/main.js')
+  body
+    header#header
+      .container
+        h1 #{sitename}
+          span.userInfo= currentUser.username
+          span.action
+            if loggedIn
+              a(href="/logout") Bыход
+            else
+              a(href="/login") Bход
+    article.page
+      .notification
+        while message = flash.shift()
+          .alert(class='alert-' + message.type)
+            p= message.message
+      .container
+        block content
+    footer#footer
+      .container
+        p.copyright 2015 &copy; node-example.loc

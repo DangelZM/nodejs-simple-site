@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title #{sitename} - #{title}
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    header#header
+      h1= sitename
+    article.page
+      .notification
+        while message = flash.shift()
+          .alert(class='alert-' + message.type)
+            p= message.message
+      block content
+    footer#footer
+      p.copyright 2015 &copy; node-example.loc
