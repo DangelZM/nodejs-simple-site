@@ -9,7 +9,8 @@ html
     header#header
       .container
         h1 #{sitename}
-          span.userInfo= currentUser.username
+          if loggedIn
+            span.userInfo= currentUser.username
           span.action
             if loggedIn
               a(href="/logout") Bыход
